@@ -2,21 +2,43 @@
 <html>
 <head>
     <title>Hello SQL!</title>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
     <script type="text/javascript" src="/vendors/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/clientapp.js"></script>
 </head>
 <body>
-    <h1>SQL in Node!</h1>
+    <div class="container">
+        <h1>SQL in Node!</h1>
 
-    <form id="sql-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
+        <form id="sql-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="zip_code">Zip Code:</label>
+                <input type="text" id="zip_code" name="zip_code" class="form-control" />
+            </div>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" />
+            <button id="submit-button" class="btn btn-primary">Save to DB!</button>
+        </form>
 
-        <button id="submit-button">Save to DB!</button>
-    </form>
+        <div class="domShow form-group">
 
+        </div>
+
+    </div>
 </body>
 </html>

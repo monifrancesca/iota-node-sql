@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     $('#submit-button').on('click', postData);
 
-
 });
 
 function postData() {
@@ -37,7 +36,20 @@ function getData() {
         type: 'GET',
         url: '/people',
         success: function(data) {
-            console.log(data);
+            // loop through each person
+            data.forEach(function(person, i) {
+                $('.domShow').append('<p>' +
+                    person.name + ', ' +
+                    person.address + ', ' +
+                    person.city + ', ' +
+                    person.state + ', ' +
+                    person.zip_code +
+                    '</p>');
+            });
+
+            //$('.domShow').append('<span>' + data[0].name + '</span>');
+
+            //console.log(data);
         }
     });
 }
